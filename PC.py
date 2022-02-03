@@ -1,13 +1,21 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 #Remove Outliers for Machine Learning
 
 
 # In[14]:
+
 
 import numpy as np
 import pandas as pd
 
 
 # In[15]:
+
 
 # citirea datelor din 10_log_extended2.csv
 my_data = pd.read_csv(r"D:\POLI\Master2\PC3\GIT\PC\10_log_extended2.csv")
@@ -68,7 +76,7 @@ my_data
 # In[58]:
 
 
-#using quantile to find the outliers
+#USING QUANTILE TO FIND THE OUTLIERS
 # importing the statistics module
 import statistics
 #calculate the mean value for NoIP
@@ -136,6 +144,67 @@ my_data[my_data['Class days'] > max_ClassDays_accesses]
 min_ClassDays_accesses = my_data['Class days'].quantile(0.1)
 my_data[my_data['Class days'] < min_ClassDays_accesses]
 #we can observe there are users who acceses during the class 10 times more than the mean value
+
+
+# In[95]:
+
+
+#STANDARD DEVIATION METHOD
+# calculate summary statistics
+my_data_mean, my_data_std = mean(my_data), std(my_data)
+my_data_mean
+
+
+# In[96]:
+
+
+my_data_std
+
+
+# In[129]:
+
+
+# identify outliers
+cut_off = my_data_std * 3
+lower, upper = (my_data_mean - cut_off), (my_data_mean + cut_off)
+lower
+
+
+# In[130]:
+
+
+upper
+
+
+# In[131]:
+
+
+my_data.dtypes
+
+
+# In[135]:
+
+
+# identify outliers
+outliers = [x for x in my_data if x < lower.astype(float) or x > upper.astype(float)]
+
+
+# In[127]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:

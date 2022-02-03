@@ -13092,8 +13092,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># citirea datelor din CreditCardsClients.csv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
@@ -13107,7 +13106,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\POLI\Master2\PC3\GIT\PC\10_log_extended2.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># citirea datelor din 10_log_extended2.csv</span>
+<span class="n">my_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\POLI\Master2\PC3\GIT\PC\10_log_extended2.csv&quot;</span><span class="p">)</span>
 <span class="n">my_data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -14242,7 +14242,7 @@ dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#using quantile to find the outliers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#USING QUANTILE TO FIND THE OUTLIERS</span>
 <span class="c1"># importing the statistics module</span>
 <span class="kn">import</span> <span class="nn">statistics</span>
 <span class="c1">#calculate the mean value for NoIP</span>
@@ -16401,6 +16401,548 @@ Name: Viewed, dtype: int64</pre>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#STANDARD DEVIATION METHOD</span>
+<span class="c1"># calculate summary statistics</span>
+<span class="n">my_data_mean</span><span class="p">,</span> <span class="n">my_data_std</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">my_data</span><span class="p">),</span> <span class="n">std</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+<span class="n">my_data_mean</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>User full name    10311.226415
+Year               2018.500000
+NoIP                 18.198113
+Created               3.636792
+Deleted               0.037736
+Downloaded            0.363208
+Ended                 0.853774
+Reset                 0.004717
+Shown                 0.580189
+Started               2.452830
+Submitted             3.820755
+Updated               0.683962
+Uploaded              3.820755
+Viewed              249.495283
+Holiday               1.655660
+Week 01               9.806604
+Week 02              15.113208
+Week 03               9.386792
+Week 04               4.938679
+Week 05              11.627358
+Week 06              50.707547
+Week 07              10.254717
+Week 08               5.066038
+Week 09               5.985849
+Week 10               8.429245
+Week 11              41.386792
+Week 12              35.080189
+Week 13              33.608491
+Week 14              22.702830
+Mean events          20.695341
+Max events           70.358491
+Min events            2.344340
+Total events        264.094340
+1st half sem        111.834906
+2nd half sem        152.259434
+Visit days           30.816038
+Events              265.750000
+Day events min        1.207547
+Day events max       35.391509
+Weekend days          4.627358
+Class days            9.957547
+Out days             23.693396
+Afternoon            68.985849
+Evening             102.542453
+Morning              12.905660
+Night                81.316038
+Class                79.617925
+Out                 186.132075
+Frequency            29.816038
+Recency              95.551887
+T                   100.160377
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data_std</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[96]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>User full name    2183.565151
+Year                 0.500000
+NoIP                10.267112
+Created              0.968935
+Deleted              0.213883
+Downloaded           0.736620
+Ended                0.825499
+Reset                0.068518
+Shown                0.925623
+Started              0.922794
+Submitted            1.109965
+Updated              0.961096
+Uploaded             1.109965
+Viewed             137.553026
+Holiday              5.263735
+Week 01             11.762001
+Week 02             10.498266
+Week 03              9.134809
+Week 04              7.284710
+Week 05             13.224042
+Week 06             29.048420
+Week 07              9.724081
+Week 08              5.443135
+Week 09              6.100169
+Week 10             12.896529
+Week 11             36.169822
+Week 12             28.388281
+Week 13             29.939286
+Week 14             28.247915
+Mean events          9.333533
+Max events          31.367177
+Min events           1.459942
+Total events       135.878590
+1st half sem        61.457119
+2nd half sem        84.390119
+Visit days          11.262273
+Events             138.776353
+Day events min       0.439059
+Day events max      12.619337
+Weekend days         3.964204
+Class days           2.049641
+Out days            12.139339
+Afternoon           49.643491
+Evening             73.215971
+Morning             14.713957
+Night               58.491082
+Class               22.077271
+Out                133.100974
+Frequency           11.262273
+Recency              7.327394
+T                    3.291317
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># identify outliers</span>
+<span class="n">cut_off</span> <span class="o">=</span> <span class="n">my_data_std</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="n">lower</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="p">(</span><span class="n">my_data_mean</span> <span class="o">-</span> <span class="n">cut_off</span><span class="p">),</span> <span class="p">(</span><span class="n">my_data_mean</span> <span class="o">+</span> <span class="n">cut_off</span><span class="p">)</span>
+<span class="n">lower</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[129]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>User full name    3760.530962
+Year              2017.000000
+NoIP               -12.603222
+Created              0.729988
+Deleted             -0.603912
+Downloaded          -1.846652
+Ended               -1.622722
+Reset               -0.200837
+Shown               -2.196679
+Started             -0.315552
+Submitted            0.490860
+Updated             -2.199325
+Uploaded             0.490860
+Viewed            -163.163794
+Holiday            -14.135543
+Week 01            -25.479400
+Week 02            -16.381592
+Week 03            -18.017634
+Week 04            -16.915450
+Week 05            -28.044768
+Week 06            -36.437712
+Week 07            -18.917527
+Week 08            -11.263366
+Week 09            -12.314658
+Week 10            -30.260342
+Week 11            -67.122675
+Week 12            -50.084655
+Week 13            -56.209369
+Week 14            -62.040915
+Mean events         -7.305257
+Max events         -23.743040
+Min events          -2.035486
+Total events      -143.541429
+1st half sem       -72.536451
+2nd half sem      -100.910922
+Visit days          -2.970782
+Events            -150.579059
+Day events min      -0.109631
+Day events max      -2.466501
+Weekend days        -7.265253
+Class days           3.808624
+Out days           -12.724620
+Afternoon          -79.944624
+Evening           -117.105460
+Morning            -31.236211
+Night              -94.157210
+Class               13.386111
+Out               -213.170847
+Frequency           -3.970782
+Recency             73.569705
+T                   90.286425
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">upper</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[130]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>User full name    16861.921869
+Year               2020.000000
+NoIP                 48.999448
+Created               6.543597
+Deleted               0.679384
+Downloaded            2.573067
+Ended                 3.330270
+Reset                 0.210271
+Shown                 3.357057
+Started               5.221212
+Submitted             7.150649
+Updated               3.567250
+Uploaded              7.150649
+Viewed              662.154360
+Holiday              17.446864
+Week 01              45.092608
+Week 02              46.608007
+Week 03              36.791219
+Week 04              26.792808
+Week 05              51.299485
+Week 06             137.852807
+Week 07              39.426961
+Week 08              21.395442
+Week 09              24.286357
+Week 10              47.118833
+Week 11             149.896260
+Week 12             120.245032
+Week 13             123.426350
+Week 14             107.446576
+Mean events          48.695939
+Max events          164.460021
+Min events            6.724165
+Total events        671.730108
+1st half sem        296.206262
+2nd half sem        405.429790
+Visit days           64.602858
+Events              682.079059
+Day events min        2.524726
+Day events max       73.249520
+Weekend days         16.519970
+Class days           16.106470
+Out days             60.111412
+Afternoon           217.916323
+Evening             322.190365
+Morning              57.047532
+Night               256.789285
+Class               145.849738
+Out                 585.434998
+Frequency            63.602858
+Recency             117.534069
+T                   110.034329
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[131]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>User full name      int64
+Year                int64
+NoIP                int64
+Created             int64
+Deleted           float64
+Downloaded        float64
+Ended             float64
+Reset             float64
+Shown             float64
+Started           float64
+Submitted           int64
+Updated           float64
+Uploaded            int64
+Viewed              int64
+Holiday           float64
+Week 01           float64
+Week 02           float64
+Week 03           float64
+Week 04           float64
+Week 05           float64
+Week 06           float64
+Week 07           float64
+Week 08           float64
+Week 09           float64
+Week 10           float64
+Week 11           float64
+Week 12           float64
+Week 13           float64
+Week 14           float64
+Mean events       float64
+Max events          int64
+Min events          int64
+Total events        int64
+1st half sem        int64
+2nd half sem        int64
+Visit days          int64
+Events              int64
+Day events min      int64
+Day events max      int64
+Weekend days        int64
+Class days          int64
+Out days            int64
+Afternoon         float64
+Evening             int64
+Morning           float64
+Night             float64
+Class               int64
+Out               float64
+Frequency           int64
+Recency             int64
+T                   int64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># identify outliers</span>
+<span class="n">outliers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">my_data</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-135-56eaff0fdea7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold"># identify outliers</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>outliers <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>x <span class="ansi-green-intense-fg ansi-bold">for</span> x <span class="ansi-green-intense-fg ansi-bold">in</span> my_data <span class="ansi-green-intense-fg ansi-bold">if</span> x <span class="ansi-yellow-intense-fg ansi-bold">&lt;</span> lower<span class="ansi-yellow-intense-fg ansi-bold">.</span>astype<span class="ansi-yellow-intense-fg ansi-bold">(</span>float<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">or</span> x <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> upper<span class="ansi-yellow-intense-fg ansi-bold">.</span>astype<span class="ansi-yellow-intense-fg ansi-bold">(</span>float<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-135-56eaff0fdea7&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-intense-fg ansi-bold">(.0)</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold"># identify outliers</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>outliers <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>x <span class="ansi-green-intense-fg ansi-bold">for</span> x <span class="ansi-green-intense-fg ansi-bold">in</span> my_data <span class="ansi-green-intense-fg ansi-bold">if</span> x <span class="ansi-yellow-intense-fg ansi-bold">&lt;</span> lower<span class="ansi-yellow-intense-fg ansi-bold">.</span>astype<span class="ansi-yellow-intense-fg ansi-bold">(</span>float<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">or</span> x <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> upper<span class="ansi-yellow-intense-fg ansi-bold">.</span>astype<span class="ansi-yellow-intense-fg ansi-bold">(</span>float<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python38\site-packages\pandas\core\ops\common.py</span> in <span class="ansi-cyan-fg">new_method</span><span class="ansi-blue-intense-fg ansi-bold">(self, other)</span>
+<span class="ansi-green-fg">     67</span>         other <span class="ansi-yellow-intense-fg ansi-bold">=</span> item_from_zerodim<span class="ansi-yellow-intense-fg ansi-bold">(</span>other<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     68</span> 
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 69</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> method<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> other<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     70</span> 
+<span class="ansi-green-fg">     71</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> new_method
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python38\site-packages\pandas\core\arraylike.py</span> in <span class="ansi-cyan-fg">__gt__</span><span class="ansi-blue-intense-fg ansi-bold">(self, other)</span>
+<span class="ansi-green-fg">     46</span>     <span class="ansi-yellow-intense-fg ansi-bold">@</span>unpack_zerodim_and_defer<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;__gt__&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     47</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __gt__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> other<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 48</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_cmp_method<span class="ansi-yellow-intense-fg ansi-bold">(</span>other<span class="ansi-yellow-intense-fg ansi-bold">,</span> operator<span class="ansi-yellow-intense-fg ansi-bold">.</span>gt<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     49</span> 
+<span class="ansi-green-fg">     50</span>     <span class="ansi-yellow-intense-fg ansi-bold">@</span>unpack_zerodim_and_defer<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;__ge__&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python38\site-packages\pandas\core\series.py</span> in <span class="ansi-cyan-fg">_cmp_method</span><span class="ansi-blue-intense-fg ansi-bold">(self, other, op)</span>
+<span class="ansi-green-fg">   5500</span> 
+<span class="ansi-green-fg">   5501</span>         <span class="ansi-green-intense-fg ansi-bold">with</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>errstate<span class="ansi-yellow-intense-fg ansi-bold">(</span>all<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#34;ignore&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 5502</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>res_values <span class="ansi-yellow-intense-fg ansi-bold">=</span> ops<span class="ansi-yellow-intense-fg ansi-bold">.</span>comparison_op<span class="ansi-yellow-intense-fg ansi-bold">(</span>lvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> rvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> op<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   5503</span> 
+<span class="ansi-green-fg">   5504</span>         <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_construct_result<span class="ansi-yellow-intense-fg ansi-bold">(</span>res_values<span class="ansi-yellow-intense-fg ansi-bold">,</span> name<span class="ansi-yellow-intense-fg ansi-bold">=</span>res_name<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python38\site-packages\pandas\core\ops\array_ops.py</span> in <span class="ansi-cyan-fg">comparison_op</span><span class="ansi-blue-intense-fg ansi-bold">(left, right, op)</span>
+<span class="ansi-green-fg">    279</span>     <span class="ansi-green-intense-fg ansi-bold">elif</span> is_numeric_v_string_like<span class="ansi-yellow-intense-fg ansi-bold">(</span>lvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> rvalues<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    280</span>         <span class="ansi-red-intense-fg ansi-bold"># GH#36377 going through the numexpr path would incorrectly raise</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 281</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> invalid_comparison<span class="ansi-yellow-intense-fg ansi-bold">(</span>lvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> rvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> op<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    282</span> 
+<span class="ansi-green-fg">    283</span>     <span class="ansi-green-intense-fg ansi-bold">elif</span> is_object_dtype<span class="ansi-yellow-intense-fg ansi-bold">(</span>lvalues<span class="ansi-yellow-intense-fg ansi-bold">.</span>dtype<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">or</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>rvalues<span class="ansi-yellow-intense-fg ansi-bold">,</span> str<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Roaming\Python\Python38\site-packages\pandas\core\ops\invalid.py</span> in <span class="ansi-cyan-fg">invalid_comparison</span><span class="ansi-blue-intense-fg ansi-bold">(left, right, op)</span>
+<span class="ansi-green-fg">     32</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">     33</span>         typ <span class="ansi-yellow-intense-fg ansi-bold">=</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>right<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>__name__
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 34</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> TypeError<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f&#34;Invalid comparison between dtype={left.dtype} and {typ}&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     35</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> res_values
+<span class="ansi-green-fg">     36</span> 
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: Invalid comparison between dtype=float64 and str</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
