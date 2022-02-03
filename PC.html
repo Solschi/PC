@@ -17852,13 +17852,344 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#AUTOMATIC OUTLIER DETECTION</span>
+<span class="c1">#eliminate columns that do no help</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Created&#39;</span><span class="p">,</span> <span class="s1">&#39;Shown&#39;</span><span class="p">,</span> <span class="s1">&#39;Started&#39;</span><span class="p">,</span> <span class="s1">&#39;Deleted&#39;</span><span class="p">,</span> <span class="s1">&#39;Downloaded&#39;</span><span class="p">,</span> <span class="s1">&#39;Ended&#39;</span><span class="p">,</span> <span class="s1">&#39;Reset&#39;</span><span class="p">,</span> <span class="s1">&#39;Submitted&#39;</span><span class="p">,</span> <span class="s1">&#39;Updated&#39;</span><span class="p">,</span> <span class="s1">&#39;Uploaded&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="s1">&#39;Recency&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">new_data</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[66]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>User full name</th>
+      <th>NoIP</th>
+      <th>Viewed</th>
+      <th>Holiday</th>
+      <th>Week 01</th>
+      <th>Week 02</th>
+      <th>Week 03</th>
+      <th>Week 04</th>
+      <th>Week 05</th>
+      <th>Week 06</th>
+      <th>...</th>
+      <th>Day events max</th>
+      <th>Weekend days</th>
+      <th>Class days</th>
+      <th>Out days</th>
+      <th>Afternoon</th>
+      <th>Evening</th>
+      <th>Morning</th>
+      <th>Night</th>
+      <th>Class</th>
+      <th>Out</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10120</td>
+      <td>22</td>
+      <td>267</td>
+      <td>3.0</td>
+      <td>14.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>18.0</td>
+      <td>6.0</td>
+      <td>74.0</td>
+      <td>...</td>
+      <td>36</td>
+      <td>12</td>
+      <td>9</td>
+      <td>33</td>
+      <td>17.0</td>
+      <td>142</td>
+      <td>11.0</td>
+      <td>110.0</td>
+      <td>51</td>
+      <td>229.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10155</td>
+      <td>21</td>
+      <td>324</td>
+      <td>6.0</td>
+      <td>34.0</td>
+      <td>16.0</td>
+      <td>17.0</td>
+      <td>9.0</td>
+      <td>18.0</td>
+      <td>63.0</td>
+      <td>...</td>
+      <td>26</td>
+      <td>14</td>
+      <td>12</td>
+      <td>39</td>
+      <td>4.0</td>
+      <td>205</td>
+      <td>13.0</td>
+      <td>113.0</td>
+      <td>84</td>
+      <td>251.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9889</td>
+      <td>13</td>
+      <td>229</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>19.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>...</td>
+      <td>25</td>
+      <td>9</td>
+      <td>8</td>
+      <td>33</td>
+      <td>77.0</td>
+      <td>58</td>
+      <td>4.0</td>
+      <td>101.0</td>
+      <td>61</td>
+      <td>179.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10203</td>
+      <td>57</td>
+      <td>463</td>
+      <td>0.0</td>
+      <td>26.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>82.0</td>
+      <td>...</td>
+      <td>45</td>
+      <td>5</td>
+      <td>6</td>
+      <td>36</td>
+      <td>100.0</td>
+      <td>166</td>
+      <td>19.0</td>
+      <td>200.0</td>
+      <td>49</td>
+      <td>436.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10153</td>
+      <td>32</td>
+      <td>332</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>28.0</td>
+      <td>22.0</td>
+      <td>15.0</td>
+      <td>31.0</td>
+      <td>88.0</td>
+      <td>...</td>
+      <td>43</td>
+      <td>7</td>
+      <td>11</td>
+      <td>41</td>
+      <td>62.0</td>
+      <td>133</td>
+      <td>13.0</td>
+      <td>135.0</td>
+      <td>65</td>
+      <td>278.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>9747</td>
+      <td>10</td>
+      <td>196</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>5.0</td>
+      <td>26.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>40.0</td>
+      <td>...</td>
+      <td>27</td>
+      <td>0</td>
+      <td>12</td>
+      <td>20</td>
+      <td>68.0</td>
+      <td>53</td>
+      <td>3.0</td>
+      <td>86.0</td>
+      <td>63</td>
+      <td>147.0</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>9799</td>
+      <td>7</td>
+      <td>162</td>
+      <td>3.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>41.0</td>
+      <td>...</td>
+      <td>31</td>
+      <td>2</td>
+      <td>10</td>
+      <td>12</td>
+      <td>91.0</td>
+      <td>26</td>
+      <td>3.0</td>
+      <td>56.0</td>
+      <td>88</td>
+      <td>88.0</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>9734</td>
+      <td>6</td>
+      <td>144</td>
+      <td>0.0</td>
+      <td>15.0</td>
+      <td>16.0</td>
+      <td>2.0</td>
+      <td>8.0</td>
+      <td>11.0</td>
+      <td>25.0</td>
+      <td>...</td>
+      <td>23</td>
+      <td>0</td>
+      <td>12</td>
+      <td>6</td>
+      <td>119.0</td>
+      <td>24</td>
+      <td>5.0</td>
+      <td>13.0</td>
+      <td>109</td>
+      <td>52.0</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>9829</td>
+      <td>27</td>
+      <td>208</td>
+      <td>0.0</td>
+      <td>18.0</td>
+      <td>7.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>70.0</td>
+      <td>...</td>
+      <td>24</td>
+      <td>3</td>
+      <td>10</td>
+      <td>22</td>
+      <td>129.0</td>
+      <td>43</td>
+      <td>0.0</td>
+      <td>47.0</td>
+      <td>85</td>
+      <td>134.0</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>7170</td>
+      <td>1</td>
+      <td>40</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>...</td>
+      <td>24</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>49</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>49</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>212 rows × 37 columns</p>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 

@@ -327,10 +327,13 @@ interquartile_range_method = my_data[
 interquartile_range_method.drop(['Year', 'Created', 'Shown', 'Started', 'Deleted', 'Downloaded', 'Ended', 'Reset', 'Submitted', 'Updated', 'Uploaded', 'Frequency', 'Recency', 'T'], axis = 1)
 
 
-# In[ ]:
+# In[66]:
 
 
-
+#AUTOMATIC OUTLIER DETECTION
+#eliminate columns that do no help
+new_data = my_data.drop(['Year', 'Created', 'Shown', 'Started', 'Deleted', 'Downloaded', 'Ended', 'Reset', 'Submitted', 'Updated', 'Uploaded', 'Frequency', 'Recency', 'T'], axis = 1)
+new_data
 
 
 # In[ ]:
