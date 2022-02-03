@@ -146,13 +146,14 @@ my_data[my_data['Class days'] < min_ClassDays_accesses]
 #we can observe there are users who acceses during the class 10 times more than the mean value
 
 
-# In[95]:
+# In[151]:
 
 
 #STANDARD DEVIATION METHOD
 # calculate summary statistics
-my_data_mean, my_data_std = mean(my_data), std(my_data)
-my_data_mean
+my_data_mean, my_data_std = mean(my_data).astype(float), std(my_data)
+my_mean = pd.to_numeric(my_data_mean, downcast='float')
+type(my_mean)
 
 
 # In[96]:
@@ -182,14 +183,49 @@ upper
 my_data.dtypes
 
 
-# In[135]:
+# In[208]:
 
 
-# identify outliers
-outliers = [x for x in my_data if x < lower.astype(float) or x > upper.astype(float)]
+type(upper)
 
 
-# In[127]:
+# In[267]:
+
+
+non_outlier = pd.DataFrame(columns = my_data.columns)
+print(non_outlier.columns)
+
+
+# In[268]:
+
+
+#identity the non-outliers
+for index in range(212):
+    if ((lower < my_data.iloc[index]).all() & (my_data.iloc[index] < upper).all()): #all() means all Values in Mask are True
+        print(index)
+        non_outliers.append(my_data.iloc[index], ignore_index=True)
+        #non_outliers my_data.iloc[index]
+
+
+# In[269]:
+
+
+non_outliers
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 
