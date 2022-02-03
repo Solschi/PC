@@ -65,7 +65,7 @@ percent_missing = (total_missing/total_cells) * 100
 print(percent_missing)
 
 
-# In[13]:
+# In[10]:
 
 
 # replace all NA's with 0
@@ -73,7 +73,7 @@ my_data = my_data.fillna(0)
 my_data
 
 
-# In[15]:
+# In[11]:
 
 
 #USING QUANTILE TO FIND THE OUTLIERS
@@ -84,7 +84,7 @@ from statistics import mean
 mean(my_data.NoIP)
 
 
-# In[16]:
+# In[12]:
 
 
 #NoIP
@@ -93,7 +93,7 @@ my_data[my_data.NoIP > max_NoIP_access]
 #there can be seen values bigger than double of the mean value for NoIP
 
 
-# In[17]:
+# In[13]:
 
 
 min_NoIP_access = my_data.NoIP.quantile(0.1)
@@ -101,7 +101,7 @@ my_data[my_data.NoIP < min_NoIP_access]
 #the NoIP in this case it's okei
 
 
-# In[18]:
+# In[14]:
 
 
 #Viewed
@@ -109,7 +109,7 @@ my_data[my_data.NoIP < min_NoIP_access]
 mean(my_data.Viewed)
 
 
-# In[19]:
+# In[15]:
 
 
 max_Viewed_accesses = my_data.Viewed.quantile(0.9)
@@ -117,7 +117,7 @@ max_Viewed_Values = my_data[my_data.Viewed > max_Viewed_accesses]
 max_Viewed_Values.Viewed
 
 
-# In[20]:
+# In[16]:
 
 
 min_Viewed_accesses = my_data.Viewed.quantile(0.10)
@@ -125,13 +125,13 @@ min_Viewed_Values = my_data[my_data.Viewed < min_Viewed_accesses]
 min_Viewed_Values.Viewed
 
 
-# In[21]:
+# In[17]:
 
 
 mean(my_data['Class days'])
 
 
-# In[22]:
+# In[18]:
 
 
 max_ClassDays_accesses = my_data['Class days'].quantile(0.9)
@@ -139,7 +139,7 @@ my_data[my_data['Class days'] > max_ClassDays_accesses]
 #we can observe there are users who acceses during the class 10 times more than the mean value
 
 
-# In[23]:
+# In[19]:
 
 
 min_ClassDays_accesses = my_data['Class days'].quantile(0.1)
@@ -147,7 +147,7 @@ my_data[my_data['Class days'] < min_ClassDays_accesses]
 #we can observe there are users who acceses during the class 10 times more than the mean value
 
 
-# In[32]:
+# In[20]:
 
 
 #STANDARD DEVIATION METHOD
@@ -157,14 +157,14 @@ from numpy import std
 my_data_mean = mean(my_data)
 
 
-# In[34]:
+# In[21]:
 
 
 my_data_std = std(my_data)
 my_data_std
 
 
-# In[35]:
+# In[22]:
 
 
 # identify outliers
@@ -173,30 +173,30 @@ lower, upper = (my_data_mean - cut_off), (my_data_mean + cut_off)
 lower
 
 
-# In[36]:
+# In[23]:
 
 
 upper
 
 
-# In[37]:
+# In[24]:
 
 
 my_data.dtypes
 
 
-# In[38]:
+# In[25]:
 
 
 type(upper)
 
 
-# In[40]:
+# In[26]:
 
 
 #lower.iloc[2]
 #FILTER AFTER OUTLINERS FOR NoIP, VIEWED AND OTHERS
-my_data[
+standard_deviation_method = my_data[
     ((my_data['NoIP'] < lower.iloc[2]) | (my_data['NoIP'] > upper.iloc[2])) | 
     #((my_data['Created'] < lower.iloc[3]) | (my_data['Created'] > upper.iloc[3])) |
     #((my_data['Deleted'] < lower.iloc[4]) | (my_data['Deleted'] > upper.iloc[4])) |
@@ -246,16 +246,85 @@ my_data[
 ]
 
 
-# In[ ]:
+# In[30]:
 
 
+standard_deviation_method.drop(['Year', 'Created', 'Shown', 'Started', 'Deleted', 'Downloaded', 'Ended', 'Reset', 'Submitted', 'Updated', 'Uploaded', 'Frequency', 'Recency', 'T'], axis = 1)
+#del standard_deviation_method.Year
 
 
-
-# In[ ]:
-
+# In[53]:
 
 
+#INTERQUARTILE RANGE METHOD
+# calculate interquartile range
+#VIEWED
+q25_Viewed, q75_Viewed = np.percentile(my_data.Viewed, 25), np.percentile(my_data.Viewed, 75)
+iqr_Viewed = q75_Viewed - q25_Viewed
+iqr_Viewed
+
+
+# In[55]:
+
+
+# calculate the outlier cutoff
+cut_off_Viewed = iqr_Viewed * 1.5
+iqr_lower_Viewed, iqr_upper_Viewed = q25_Viewed - cut_off_Viewed, q75_Viewed + cut_off_Viewed
+iqr_lower_Viewed, iqr_upper_Viewed
+
+
+# In[56]:
+
+
+#NoIP
+q25_NoIP, q75_NoIP = np.percentile(my_data.NoIP, 25), np.percentile(my_data.NoIP, 75)
+iqr_NoIP = q75_NoIP - q25_NoIP
+iqr_NoIP
+
+
+# In[57]:
+
+
+# calculate the outlier cutoff
+cut_off_NoIP = iqr_NoIP * 1.5
+iqr_lower_NoIP, iqr_upper_NoIP = q25_NoIP - cut_off_NoIP, q75_NoIP + cut_off_NoIP
+iqr_lower_NoIP, iqr_upper_NoIP
+
+
+# In[59]:
+
+
+#NoIP
+q25_ClassDays, q75_ClassDays = np.percentile(my_data['Class days'], 25), np.percentile(my_data['Class days'], 75)
+iqr_ClassDays = q75_ClassDays - q25_ClassDays
+iqr_ClassDays
+
+
+# In[60]:
+
+
+# calculate the outlier cutoff
+cut_off_ClassDays = iqr_ClassDays * 1.5
+iqr_lower_ClassDays, iqr_upper_ClassDays = q25_ClassDays - cut_off_ClassDays, q75_ClassDays + cut_off_ClassDays
+iqr_lower_ClassDays, iqr_ClassDays
+
+
+# In[61]:
+
+
+#FILTER AFTER OUTLINERS FOR NoIP, VIEWED AND OTHERS
+interquartile_range_method = my_data[
+    ((my_data['NoIP'] < iqr_lower_NoIP) | (my_data['NoIP'] > iqr_upper_NoIP)) | 
+    ((my_data['Viewed'] < iqr_lower_Viewed) | (my_data['Viewed'] > iqr_upper_Viewed)) |
+    ((my_data['Class days'] < iqr_lower_ClassDays) | (my_data['Class days'] > iqr_upper_ClassDays)) 
+    
+]
+
+
+# In[62]:
+
+
+interquartile_range_method.drop(['Year', 'Created', 'Shown', 'Started', 'Deleted', 'Downloaded', 'Ended', 'Reset', 'Submitted', 'Updated', 'Uploaded', 'Frequency', 'Recency', 'T'], axis = 1)
 
 
 # In[ ]:
