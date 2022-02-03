@@ -13089,7 +13089,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13103,7 +13103,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># citirea datelor din 10_log_extended2.csv</span>
@@ -13121,7 +13121,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13138,7 +13138,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print a summary of the data</span>
@@ -13155,7 +13155,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13408,7 +13408,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data</span>
@@ -13424,7 +13424,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13749,7 +13749,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the number of missing data points per column</span>
@@ -13763,7 +13763,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># look at the # of missing points</span>
@@ -13780,7 +13780,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13848,7 +13848,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># how many total missing values do we have?</span>
@@ -13863,7 +13863,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># percent of data that is missing</span>
@@ -13896,7 +13896,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace all NA&#39;s with 0</span>
@@ -13914,7 +13914,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -14239,12 +14239,13 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#USING QUANTILE TO FIND THE OUTLIERS</span>
 <span class="c1"># importing the statistics module</span>
 <span class="kn">import</span> <span class="nn">statistics</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
 <span class="c1">#calculate the mean value for NoIP</span>
 <span class="n">mean</span><span class="p">(</span><span class="n">my_data</span><span class="o">.</span><span class="n">NoIP</span><span class="p">)</span>
 </pre></div>
@@ -14259,7 +14260,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[58]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14276,7 +14277,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#NoIP</span>
@@ -14295,7 +14296,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14884,7 +14885,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_NoIP_access</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">NoIP</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
@@ -14902,7 +14903,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[60]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15467,7 +15468,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Viewed</span>
@@ -15485,7 +15486,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15502,7 +15503,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_Viewed_accesses</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">Viewed</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
@@ -15520,7 +15521,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[71]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -15559,7 +15560,7 @@ Name: Viewed, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_Viewed_accesses</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">Viewed</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.10</span><span class="p">)</span>
@@ -15577,7 +15578,7 @@ Name: Viewed, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[72]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -15616,7 +15617,7 @@ Name: Viewed, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean</span><span class="p">(</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Class days&#39;</span><span class="p">])</span>
@@ -15632,7 +15633,7 @@ Name: Viewed, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[73]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -15649,7 +15650,7 @@ Name: Viewed, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_ClassDays_accesses</span> <span class="o">=</span> <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Class days&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
@@ -15667,7 +15668,7 @@ Name: Viewed, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[75]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -15944,7 +15945,7 @@ Name: Viewed, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_ClassDays_accesses</span> <span class="o">=</span> <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Class days&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
@@ -15962,7 +15963,7 @@ Name: Viewed, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[76]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -16407,47 +16408,28 @@ Name: Viewed, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#STANDARD DEVIATION METHOD</span>
 <span class="c1"># calculate summary statistics</span>
-<span class="n">my_data_mean</span><span class="p">,</span> <span class="n">my_data_std</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">std</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
-<span class="n">my_mean</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">my_data_mean</span><span class="p">,</span> <span class="n">downcast</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_mean</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mean</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">std</span>
+<span class="n">my_data_mean</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[151]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>pandas.core.series.Series</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data_std</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data_std</span> <span class="o">=</span> <span class="n">std</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+<span class="n">my_data_std</span>
 </pre></div>
 
     </div>
@@ -16460,7 +16442,7 @@ Name: Viewed, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[96]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -16528,7 +16510,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># identify outliers</span>
@@ -16547,7 +16529,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[129]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -16615,7 +16597,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">upper</span>
@@ -16631,7 +16613,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[130]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -16699,7 +16681,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data</span><span class="o">.</span><span class="n">dtypes</span>
@@ -16715,7 +16697,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[131]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -16783,7 +16765,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span>
@@ -16799,7 +16781,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[208]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -16816,11 +16798,59 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[267]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">non_outlier</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">non_outlier</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#lower.iloc[2]</span>
+<span class="c1">#FILTER AFTER OUTLINERS FOR NoIP, VIEWED AND OTHERS</span>
+<span class="n">my_data</span><span class="p">[</span>
+    <span class="p">((</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;NoIP&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">|</span> <span class="p">(</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;NoIP&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span> <span class="o">|</span> 
+    <span class="c1">#((my_data[&#39;Created&#39;] &lt; lower.iloc[3]) | (my_data[&#39;Created&#39;] &gt; upper.iloc[3])) |</span>
+    <span class="c1">#((my_data[&#39;Deleted&#39;] &lt; lower.iloc[4]) | (my_data[&#39;Deleted&#39;] &gt; upper.iloc[4])) |</span>
+    <span class="c1">#((my_data[&#39;Downloaded&#39;] &lt; lower.iloc[5]) | (my_data[&#39;Downloaded&#39;] &gt; upper.iloc[5])) | </span>
+    <span class="c1">#((my_data[&#39;Ended&#39;] &lt; lower.iloc[6]) | (my_data[&#39;Ended&#39;] &gt; upper.iloc[6])) |</span>
+    <span class="c1">#((my_data[&#39;Reset&#39;] &lt; lower.iloc[7]) | (my_data[&#39;Reset&#39;] &gt; upper.iloc[7])) | </span>
+    <span class="c1">#((my_data[&#39;Shown&#39;] &lt; lower.iloc[8]) | (my_data[&#39;Shown&#39;] &gt; upper.iloc[8])) |</span>
+    <span class="c1">#((my_data[&#39;Started&#39;] &lt; lower.iloc[9]) | (my_data[&#39;Started&#39;] &gt; upper.iloc[9])) |</span>
+    <span class="c1">#((my_data[&#39;Submitted&#39;] &lt; lower.iloc[10]) | (my_data[&#39;Submitted&#39;] &gt; upper.iloc[10])) |</span>
+    <span class="c1">#((my_data[&#39;Updated&#39;] &lt; lower.iloc[11]) | (my_data[&#39;Updated&#39;] &gt; upper.iloc[11])) |</span>
+    <span class="c1">#((my_data[&#39;Uploaded&#39;] &lt; lower.iloc[12]) | (my_data[&#39;Uploaded&#39;] &gt; upper.iloc[12])) |</span>
+    <span class="p">((</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Viewed&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span> <span class="o">|</span> <span class="p">(</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Viewed&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">]))</span> <span class="o">|</span>
+    <span class="c1">#((my_data[&#39;Holiday&#39;] &lt; lower.iloc[14]) | (my_data[&#39;Holiday&#39;] &gt; upper.iloc[14])) |</span>
+    <span class="c1">#((my_data[&#39;Week 01&#39;] &lt; lower.iloc[15]) | (my_data[&#39;Week 01&#39;] &gt; upper.iloc[15])) |</span>
+    <span class="c1">#((my_data[&#39;Week 02&#39;] &lt; lower.iloc[16]) | (my_data[&#39;Week 02&#39;] &gt; upper.iloc[16])) |</span>
+    <span class="c1">#((my_data[&#39;Week 03&#39;] &lt; lower.iloc[17]) | (my_data[&#39;Week 03&#39;] &gt; upper.iloc[17])) |</span>
+    <span class="c1">#((my_data[&#39;Week 04&#39;] &lt; lower.iloc[18]) | (my_data[&#39;Week 04&#39;] &gt; upper.iloc[18])) |</span>
+    <span class="c1">#((my_data[&#39;Week 05&#39;] &lt; lower.iloc[19]) | (my_data[&#39;Week 05&#39;] &gt; upper.iloc[19])) |</span>
+    <span class="c1">#((my_data[&#39;Week 06&#39;] &lt; lower.iloc[20]) | (my_data[&#39;Week 06&#39;] &gt; upper.iloc[20])) |</span>
+    <span class="c1">#((my_data[&#39;Week 07&#39;] &lt; lower.iloc[21]) | (my_data[&#39;Week 07&#39;] &gt; upper.iloc[21])) |</span>
+    <span class="c1">#((my_data[&#39;Week 08&#39;] &lt; lower.iloc[22]) | (my_data[&#39;Week 08&#39;] &gt; upper.iloc[22])) |</span>
+    <span class="c1">#((my_data[&#39;Week 09&#39;] &lt; lower.iloc[23]) | (my_data[&#39;Week 09&#39;] &gt; upper.iloc[23])) |</span>
+    <span class="c1">#((my_data[&#39;Week 10&#39;] &lt; lower.iloc[24]) | (my_data[&#39;Week 10&#39;] &gt; upper.iloc[24])) |</span>
+    <span class="c1">#((my_data[&#39;Week 11&#39;] &lt; lower.iloc[25]) | (my_data[&#39;Week 11&#39;] &gt; upper.iloc[25])) |</span>
+    <span class="c1">#((my_data[&#39;Week 12&#39;] &lt; lower.iloc[26]) | (my_data[&#39;Week 12&#39;] &gt; upper.iloc[26])) |</span>
+    <span class="c1">#((my_data[&#39;Week 13&#39;] &lt; lower.iloc[27]) | (my_data[&#39;Week 13&#39;] &gt; upper.iloc[27])) |</span>
+    <span class="c1">#((my_data[&#39;Week 14&#39;] &lt; lower.iloc[28]) | (my_data[&#39;Week 14&#39;] &gt; upper.iloc[28])) |</span>
+    <span class="c1">#((my_data[&#39;Mean events&#39;] &lt; lower.iloc[29]) | (my_data[&#39;Mean events&#39;] &gt; upper.iloc[29])) |</span>
+    <span class="c1">#((my_data[&#39;Max events&#39;] &lt; lower.iloc[30]) | (my_data[&#39;Max events&#39;] &gt; upper.iloc[30])) |</span>
+    <span class="c1">#((my_data[&#39;Min events&#39;] &lt; lower.iloc[31]) | (my_data[&#39;Min events&#39;] &gt; upper.iloc[31])) |</span>
+    <span class="c1">#((my_data[&#39;Total events&#39;] &lt; lower.iloc[32]) | (my_data[&#39;Total events&#39;] &gt; upper.iloc[32])) |</span>
+    <span class="c1">#((my_data[&#39;1st half sem&#39;] &lt; lower.iloc[33]) | (my_data[&#39;1st half sem&#39;] &gt; upper.iloc[33])) |</span>
+    <span class="c1">#((my_data[&#39;2nd half sem&#39;] &lt; lower.iloc[34]) | (my_data[&#39;2nd half sem&#39;] &gt; upper.iloc[34])) |</span>
+    <span class="c1">#((my_data[&#39;Visit days&#39;] &lt; lower.iloc[35]) | (my_data[&#39;Visit days&#39;] &gt; upper.iloc[35])) |</span>
+    <span class="c1">#((my_data[&#39;Day events min&#39;] &lt; lower.iloc[36]) | (my_data[&#39;Day events min&#39;] &gt; upper.iloc[36])) |</span>
+    <span class="c1">#((my_data[&#39;Day events max&#39;] &lt; lower.iloc[37]) | (my_data[&#39;Day events max&#39;] &gt; upper.iloc[37])) |</span>
+    <span class="c1">#((my_data[&#39;Weekend days&#39;] &lt; lower.iloc[38]) | (my_data[&#39;Weekend days&#39;] &gt; upper.iloc[38])) |</span>
+    <span class="p">((</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Class days&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">39</span><span class="p">])</span> <span class="o">|</span> <span class="p">(</span><span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;Class days&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">39</span><span class="p">]))</span> <span class="c1">#|</span>
+    <span class="c1">#((my_data[&#39;Out days&#39;] &lt; lower.iloc[40]) | (my_data[&#39;Out days&#39;] &gt; upper.iloc[40])) |</span>
+    <span class="c1">#((my_data[&#39;Afternoon&#39;] &lt; lower.iloc[41]) | (my_data[&#39;Afternoon&#39;] &gt; upper.iloc[41])) |</span>
+    <span class="c1">#((my_data[&#39;Evening&#39;] &lt; lower.iloc[42]) | (my_data[&#39;Evening&#39;] &gt; upper.iloc[42])) |</span>
+    <span class="c1">#((my_data[&#39;Morning&#39;] &lt; lower.iloc[43]) | (my_data[&#39;Morning&#39;] &gt; upper.iloc[43])) |</span>
+    <span class="c1">#((my_data[&#39;Night&#39;] &lt; lower.iloc[44]) | (my_data[&#39;Night&#39;] &gt; upper.iloc[44])) |</span>
+    <span class="c1">#((my_data[&#39;Class&#39;] &lt; lower.iloc[45]) | (my_data[&#39;Class&#39;] &gt; upper.iloc[45])) |</span>
+    <span class="c1">#((my_data[&#39;Out&#39;] &lt; lower.iloc[46]) | (my_data[&#39;Out&#39;] &gt; upper.iloc[46]))</span>
+    
+<span class="p">]</span>
 </pre></div>
 
     </div>
@@ -16833,317 +16863,205 @@ dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Index([&#39;User full name&#39;, &#39;Year&#39;, &#39;NoIP&#39;, &#39;Created&#39;, &#39;Deleted&#39;, &#39;Downloaded&#39;,
-       &#39;Ended&#39;, &#39;Reset&#39;, &#39;Shown&#39;, &#39;Started&#39;, &#39;Submitted&#39;, &#39;Updated&#39;,
-       &#39;Uploaded&#39;, &#39;Viewed&#39;, &#39;Holiday&#39;, &#39;Week 01&#39;, &#39;Week 02&#39;, &#39;Week 03&#39;,
-       &#39;Week 04&#39;, &#39;Week 05&#39;, &#39;Week 06&#39;, &#39;Week 07&#39;, &#39;Week 08&#39;, &#39;Week 09&#39;,
-       &#39;Week 10&#39;, &#39;Week 11&#39;, &#39;Week 12&#39;, &#39;Week 13&#39;, &#39;Week 14&#39;, &#39;Mean events&#39;,
-       &#39;Max events&#39;, &#39;Min events&#39;, &#39;Total events&#39;, &#39;1st half sem&#39;,
-       &#39;2nd half sem&#39;, &#39;Visit days&#39;, &#39;Events&#39;, &#39;Day events min&#39;,
-       &#39;Day events max&#39;, &#39;Weekend days&#39;, &#39;Class days&#39;, &#39;Out days&#39;, &#39;Afternoon&#39;,
-       &#39;Evening&#39;, &#39;Morning&#39;, &#39;Night&#39;, &#39;Class&#39;, &#39;Out&#39;, &#39;Frequency&#39;, &#39;Recency&#39;,
-       &#39;T&#39;],
-      dtype=&#39;object&#39;)
-</pre>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>User full name</th>
+      <th>Year</th>
+      <th>NoIP</th>
+      <th>Created</th>
+      <th>Deleted</th>
+      <th>Downloaded</th>
+      <th>Ended</th>
+      <th>Reset</th>
+      <th>Shown</th>
+      <th>Started</th>
+      <th>...</th>
+      <th>Out days</th>
+      <th>Afternoon</th>
+      <th>Evening</th>
+      <th>Morning</th>
+      <th>Night</th>
+      <th>Class</th>
+      <th>Out</th>
+      <th>Frequency</th>
+      <th>Recency</th>
+      <th>T</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>10203</td>
+      <td>2018</td>
+      <td>57</td>
+      <td>5</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>36</td>
+      <td>100.0</td>
+      <td>166</td>
+      <td>19.0</td>
+      <td>200.0</td>
+      <td>49</td>
+      <td>436.0</td>
+      <td>40</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10184</td>
+      <td>2018</td>
+      <td>51</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>66</td>
+      <td>71.0</td>
+      <td>311</td>
+      <td>80.0</td>
+      <td>298.0</td>
+      <td>119</td>
+      <td>641.0</td>
+      <td>70</td>
+      <td>103</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>10127</td>
+      <td>2018</td>
+      <td>43</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>53</td>
+      <td>91.0</td>
+      <td>407</td>
+      <td>57.0</td>
+      <td>279.0</td>
+      <td>131</td>
+      <td>703.0</td>
+      <td>57</td>
+      <td>100</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>9842</td>
+      <td>2019</td>
+      <td>54</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>52</td>
+      <td>73.0</td>
+      <td>249</td>
+      <td>62.0</td>
+      <td>172.0</td>
+      <td>81</td>
+      <td>475.0</td>
+      <td>52</td>
+      <td>103</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>9839</td>
+      <td>2019</td>
+      <td>38</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>77</td>
+      <td>311.0</td>
+      <td>515</td>
+      <td>11.0</td>
+      <td>455.0</td>
+      <td>104</td>
+      <td>1188.0</td>
+      <td>77</td>
+      <td>103</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>9752</td>
+      <td>2019</td>
+      <td>58</td>
+      <td>5</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>42</td>
+      <td>288.0</td>
+      <td>147</td>
+      <td>50.0</td>
+      <td>221.0</td>
+      <td>92</td>
+      <td>614.0</td>
+      <td>47</td>
+      <td>98</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+<p>6 rows × 51 columns</p>
 </div>
 </div>
 
 </div>
-</div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[268]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#identity the non-outliers</span>
-<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">212</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">((</span><span class="n">lower</span> <span class="o">&lt;</span> <span class="n">my_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">my_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">upper</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()):</span> <span class="c1">#all() means all Values in Mask are True</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-        <span class="n">non_outliers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="c1">#non_outliers my_data.iloc[index]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-4
-8
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-28
-31
-32
-33
-34
-35
-36
-38
-39
-40
-42
-43
-44
-45
-47
-48
-52
-53
-55
-57
-58
-60
-64
-68
-69
-71
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-106
-108
-110
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-124
-128
-131
-134
-135
-136
-138
-139
-140
-141
-142
-144
-145
-146
-147
-148
-149
-152
-153
-155
-156
-157
-161
-163
-164
-165
-166
-167
-169
-170
-171
-173
-175
-176
-177
-178
-179
-180
-181
-183
-184
-185
-187
-188
-189
-190
-194
-196
-197
-198
-199
-200
-201
-202
-204
-206
-207
-208
-209
-210
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[269]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">non_outliers</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[269]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>User full name    9829.00
-Year              2019.00
-NoIP                27.00
-Created              3.00
-Deleted              0.00
-Downloaded           0.00
-Ended                0.00
-Reset                0.00
-Shown                0.00
-Started              2.00
-Submitted            3.00
-Updated              0.00
-Uploaded             3.00
-Viewed             208.00
-Holiday              0.00
-Week 01             18.00
-Week 02              7.00
-Week 03             23.00
-Week 04              4.00
-Week 05              5.00
-Week 06             70.00
-Week 07             13.00
-Week 08              0.00
-Week 09              3.00
-Week 10              0.00
-Week 11             13.00
-Week 12             40.00
-Week 13             18.00
-Week 14              5.00
-Mean events         18.25
-Max events          70.00
-Min events           3.00
-Total events       219.00
-1st half sem       140.00
-2nd half sem        79.00
-Visit days          30.00
-Events             219.00
-Day events min       1.00
-Day events max      24.00
-Weekend days         3.00
-Class days          10.00
-Out days            22.00
-Afternoon          129.00
-Evening             43.00
-Morning              0.00
-Night               47.00
-Class               85.00
-Out                134.00
-Frequency           29.00
-Recency             98.00
-T                  103.00
-Name: 210, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
